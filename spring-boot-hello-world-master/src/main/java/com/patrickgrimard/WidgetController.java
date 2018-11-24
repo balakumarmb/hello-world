@@ -1,5 +1,6 @@
 package com.patrickgrimard;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,9 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/**")
 @RestController
 public class WidgetController {
-
+	
+	@Value("${first.name}")
+	private String firstName;
+	
     @RequestMapping(method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Widget index() {
-        return new Widget("green", 10, 7);
+        return new Widget(firstName, 10, 7);
     }
 }
