@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WidgetController {
 	
-	@Value("${first.name}")
+	@Value("${firstname}")
 	private String firstName;
 	
     @RequestMapping(method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
