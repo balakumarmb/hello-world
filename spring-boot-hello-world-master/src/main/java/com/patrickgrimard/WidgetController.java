@@ -16,8 +16,9 @@ public class WidgetController {
 	@Value("${first.name}")
 	private String firstName;
 	
-	@Value("${lastname}")
+	@Value("${last.name}")
 	private String lastName;
+	
 	
     @RequestMapping(method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Widget index() {
