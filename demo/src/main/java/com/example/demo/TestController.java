@@ -23,7 +23,7 @@ public class TestController {
     }
     
     
-    @RequestMapping(value ="/",method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @RequestMapping(value ="/aclauncher",method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Widget index1() {
         return new Widget("Mugilan", 100, 70);
     }
