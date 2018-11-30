@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/**")
 @RestController
 public class TestController {
-	@Value("${first.name}")
+	@Value("${first_name}")
 	private String firstName;
 	
-	@Value("${last.name}")
+	@Value("${last_name}")
 	private String lastName;
 	
 	
