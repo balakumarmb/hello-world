@@ -10,16 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
-	@Value("${first.name}")
+	@Value("${emp.name}")
 	private String firstName;
 	
-	@Value("${last.name}")
-	private String lastName;
-	
-	
+		
     @RequestMapping(value ="/api/**",method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Widget index() {
-        return new Widget(firstName+lastName, 10, 7);
+        return new Widget(firstName, 10, 7);
     }
     
     
