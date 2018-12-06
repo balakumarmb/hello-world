@@ -6,7 +6,7 @@
 	<groupId>kathir.exmaple.ui</groupId>
 	<artifactId>demojsp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>demojsp</name>
 	<description>Demo project for Spring Boot</description>
@@ -81,10 +81,11 @@
             <finalName>demojsp</finalName>
             <plugins>
                 <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>                   
+                    <artifactId>maven-war-plugin</artifactId>
+                   <!--  <version>2.1.1</version> --> 
                     <configuration>
                         <outputDirectory>webapps</outputDirectory>
-                        <!--  <jarName>ROOT</jarName> -->
+                        <warName>ROOT</warName>
                     </configuration> 
                 </plugin>
             </plugins>
